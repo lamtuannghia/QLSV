@@ -206,7 +206,6 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		{
 			qlsv ^ aboutForm = gcnew qlsv;
 			aboutForm->Show();
-			this->Hide();
 		}
 		else {
 			MessageBox::Show("Incorrect Password", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);

@@ -214,7 +214,6 @@ namespace QLSV {
 			this->Name = L"qlsv";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Student Manangement";
-			this->Load += gcnew System::EventHandler(this, &qlsv::qlsv_Load);
 			this->tabControl1->ResumeLayout(false);
 			this->tabPageStudent->ResumeLayout(false);
 			this->tabPageStudent->PerformLayout();

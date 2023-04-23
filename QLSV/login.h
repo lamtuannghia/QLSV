@@ -105,6 +105,7 @@ namespace QLSV {
 			// 
 			// textBox1
 			// 
+			this->textBox1->BackColor = System::Drawing::Color::BlanchedAlmond;
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox1->Location = System::Drawing::Point(32, 129);
 			this->textBox1->Name = L"textBox1";
@@ -114,7 +115,7 @@ namespace QLSV {
 			// 
 			// textBox2
 			// 
-			this->textBox2->BackColor = System::Drawing::Color::White;
+			this->textBox2->BackColor = System::Drawing::Color::BlanchedAlmond;
 			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->textBox2->Location = System::Drawing::Point(32, 199);
 			this->textBox2->Name = L"textBox2";
@@ -174,7 +175,7 @@ namespace QLSV {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::White;
+			this->BackColor = System::Drawing::Color::BlanchedAlmond;
 			this->ClientSize = System::Drawing::Size(291, 400);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
@@ -206,6 +207,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		{
 			qlsv ^ aboutForm = gcnew qlsv;
 			aboutForm->Show();
+			this->Hide();
 		}
 		else {
 			MessageBox::Show("Incorrect Password", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);

@@ -1,6 +1,10 @@
 #pragma once
 #include "frmAttendance.h"
 #include "RegisterForm.h"
+#include "frmManageStu.h"
+#include "frmNewCourse.h"
+#include "frmStatus.h"
+#include "frmManageCourse.h"
 namespace QLSV {
 
 	using namespace System;
@@ -159,6 +163,7 @@ namespace QLSV {
 			this->btnExit->Text = L"Exit";
 			this->btnExit->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnExit->UseVisualStyleBackColor = true;
+			this->btnExit->Click += gcnew System::EventHandler(this, &qlsv::btnExit_Click);
 			// 
 			// btnSettings
 			// 
@@ -292,6 +297,7 @@ namespace QLSV {
 			this->btnManageCourse->Text = L"Manage Course";
 			this->btnManageCourse->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnManageCourse->UseVisualStyleBackColor = false;
+			this->btnManageCourse->Click += gcnew System::EventHandler(this, &qlsv::btnManageCourse_Click);
 			// 
 			// btnNewCourse
 			// 
@@ -311,6 +317,7 @@ namespace QLSV {
 			this->btnNewCourse->Text = L"New Course";
 			this->btnNewCourse->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnNewCourse->UseVisualStyleBackColor = false;
+			this->btnNewCourse->Click += gcnew System::EventHandler(this, &qlsv::btnNewCourse_Click);
 			// 
 			// btnCourse
 			// 
@@ -360,6 +367,7 @@ namespace QLSV {
 			this->btnStatus->Text = L"Status";
 			this->btnStatus->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnStatus->UseVisualStyleBackColor = false;
+			this->btnStatus->Click += gcnew System::EventHandler(this, &qlsv::btnStatus_Click);
 			// 
 			// btnManageStudent
 			// 
@@ -379,6 +387,7 @@ namespace QLSV {
 			this->btnManageStudent->Text = L"Manage Student";
 			this->btnManageStudent->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnManageStudent->UseVisualStyleBackColor = false;
+			this->btnManageStudent->Click += gcnew System::EventHandler(this, &qlsv::btnManageStudent_Click);
 			// 
 			// btnRegistration
 			// 
@@ -447,11 +456,13 @@ namespace QLSV {
 			// 
 			// panel_main
 			// 
+			this->panel_main->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->panel_main->Controls->Add(this->panel4);
 			this->panel_main->Controls->Add(this->panel3);
 			this->panel_main->Controls->Add(this->panel2);
 			this->panel_main->Controls->Add(this->panel1);
-			this->panel_main->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel_main->Location = System::Drawing::Point(170, 0);
 			this->panel_main->Name = L"panel_main";
 			this->panel_main->Size = System::Drawing::Size(764, 511);
@@ -509,7 +520,6 @@ namespace QLSV {
 			this->panel_score->ResumeLayout(false);
 			this->panel_course->ResumeLayout(false);
 			this->panel_student->ResumeLayout(false);
-			this->panel_main->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -569,6 +579,25 @@ private: System::Void btnAttendance_Click(System::Object^ sender, System::EventA
 }
 private: System::Void btnRegistration_Click(System::Object^ sender, System::EventArgs^ e) {
 	openChildForm(gcnew RegisterForm());
+	hideSubmenu();
+}
+private: System::Void btnManageStudent_Click(System::Object^ sender, System::EventArgs^ e) {
+	openChildForm(gcnew frmManageStu());
+	hideSubmenu();
+}
+private: System::Void btnExit_Click(System::Object^ sender, System::EventArgs^ e) {
+	Application::Exit();
+}
+private: System::Void btnNewCourse_Click(System::Object^ sender, System::EventArgs^ e) {
+	openChildForm(gcnew frmNewCourse());
+	hideSubmenu();
+}
+private: System::Void btnStatus_Click(System::Object^ sender, System::EventArgs^ e) {
+	openChildForm(gcnew frmStatus());
+	hideSubmenu();
+}
+private: System::Void btnManageCourse_Click(System::Object^ sender, System::EventArgs^ e) {
+	openChildForm(gcnew frmManageCourse());
 	hideSubmenu();
 }
 };

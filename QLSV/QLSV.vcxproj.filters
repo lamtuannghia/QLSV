@@ -24,6 +24,18 @@
     <ClCompile Include="RegisterForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="frmManageStu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frmStatus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frmNewCourse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frmManageCourse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="qlsv.h">
@@ -33,6 +45,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RegisterForm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frmManageStu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frmStatus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frmNewCourse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frmManageCourse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

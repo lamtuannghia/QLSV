@@ -121,11 +121,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="frmManageCourse.cpp" />
+    <ClCompile Include="frmManageStu.cpp" />
+    <ClCompile Include="frmNewCourse.cpp" />
+    <ClCompile Include="frmStatus.cpp" />
     <ClCompile Include="login.cpp" />
     <ClCompile Include="qlsv.cpp" />
     <ClCompile Include="RegisterForm.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="frmManageCourse.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmManageStu.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmNewCourse.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmStatus.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="login.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -137,6 +153,18 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmManageCourse.resx">
+      <DependentUpon>frmManageCourse.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageStu.resx">
+      <DependentUpon>frmManageStu.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewCourse.resx">
+      <DependentUpon>frmNewCourse.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStatus.resx">
+      <DependentUpon>frmStatus.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.h</DependentUpon>
     </EmbeddedResource>

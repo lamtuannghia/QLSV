@@ -174,9 +174,11 @@ namespace QLSV {
 			// 
 			// dateTimePicker1
 			// 
-			this->dateTimePicker1->Location = System::Drawing::Point(129, 352);
+			this->dateTimePicker1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->dateTimePicker1->Location = System::Drawing::Point(129, 357);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(228, 27);
+			this->dateTimePicker1->Size = System::Drawing::Size(228, 23);
 			this->dateTimePicker1->TabIndex = 8;
 			// 
 			// label5
@@ -282,7 +284,7 @@ namespace QLSV {
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel2->Location = System::Drawing::Point(0, 0);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(715, 34);
+			this->panel2->Size = System::Drawing::Size(764, 34);
 			this->panel2->TabIndex = 16;
 			// 
 			// label6
@@ -303,7 +305,7 @@ namespace QLSV {
 			this->AutoScaleDimensions = System::Drawing::SizeF(7, 19);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Cornsilk;
-			this->ClientSize = System::Drawing::Size(715, 522);
+			this->ClientSize = System::Drawing::Size(764, 511);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
@@ -323,6 +325,7 @@ namespace QLSV {
 			this->Controls->Add(this->dataGridView1);
 			this->Font = (gcnew System::Drawing::Font(L"Segoe Print", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"RegisterForm";
 			this->Text = L"RegisterForm";

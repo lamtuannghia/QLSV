@@ -1,5 +1,6 @@
 #pragma once
 #include "frmAttendance.h"
+#include "RegisterForm.h"
 namespace QLSV {
 
 	using namespace System;
@@ -158,7 +159,6 @@ namespace QLSV {
 			this->btnExit->Text = L"Exit";
 			this->btnExit->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnExit->UseVisualStyleBackColor = true;
-			this->btnExit->Click += gcnew System::EventHandler(this, &qlsv::btnExit_Click);
 			// 
 			// btnSettings
 			// 
@@ -398,6 +398,7 @@ namespace QLSV {
 			this->btnRegistration->Text = L"Registration";
 			this->btnRegistration->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnRegistration->UseVisualStyleBackColor = false;
+			this->btnRegistration->Click += gcnew System::EventHandler(this, &qlsv::btnRegistration_Click);
 			// 
 			// btnStudent
 			// 
@@ -564,6 +565,10 @@ private: System::Void btnScore_Click(System::Object^ sender, System::EventArgs^ 
 		}
 private: System::Void btnAttendance_Click(System::Object^ sender, System::EventArgs^ e) {
 	openChildForm(gcnew frmAttendance());
+}
+private: System::Void btnRegistration_Click(System::Object^ sender, System::EventArgs^ e) {
+	openChildForm(gcnew RegisterForm());
+	hideSubmenu();
 }
 };
 }

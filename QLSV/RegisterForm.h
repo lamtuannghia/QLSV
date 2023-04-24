@@ -38,7 +38,7 @@ namespace QLSV {
 	protected:
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::TextBox^ textBox2;
+
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::TextBox^ textBox3;
 	private: System::Windows::Forms::Label^ label3;
@@ -53,6 +53,9 @@ namespace QLSV {
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Panel^ panel2;
 	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::TextBox^ textBox5;
 
 	private:
 		/// <summary>
@@ -70,7 +73,6 @@ namespace QLSV {
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -85,6 +87,9 @@ namespace QLSV {
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panel2->SuspendLayout();
@@ -95,7 +100,7 @@ namespace QLSV {
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Location = System::Drawing::Point(12, 40);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(691, 248);
+			this->dataGridView1->Size = System::Drawing::Size(740, 248);
 			this->dataGridView1->TabIndex = 0;
 			// 
 			// label1
@@ -115,15 +120,8 @@ namespace QLSV {
 			// 
 			this->textBox1->Location = System::Drawing::Point(129, 305);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(148, 27);
+			this->textBox1->Size = System::Drawing::Size(110, 27);
 			this->textBox1->TabIndex = 2;
-			// 
-			// textBox2
-			// 
-			this->textBox2->Location = System::Drawing::Point(412, 306);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(148, 27);
-			this->textBox2->TabIndex = 4;
 			// 
 			// label2
 			// 
@@ -132,7 +130,7 @@ namespace QLSV {
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(320, 308);
+			this->label2->Location = System::Drawing::Point(245, 308);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(86, 18);
 			this->label2->TabIndex = 3;
@@ -143,7 +141,7 @@ namespace QLSV {
 			this->textBox3->Location = System::Drawing::Point(129, 399);
 			this->textBox3->Multiline = true;
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(431, 27);
+			this->textBox3->Size = System::Drawing::Size(490, 57);
 			this->textBox3->TabIndex = 6;
 			// 
 			// label3
@@ -188,7 +186,7 @@ namespace QLSV {
 				static_cast<System::Byte>(0)));
 			this->label5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(366, 357);
+			this->label5->Location = System::Drawing::Point(384, 357);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(69, 18);
 			this->label5->TabIndex = 9;
@@ -201,7 +199,7 @@ namespace QLSV {
 				static_cast<System::Byte>(0)));
 			this->radioButton1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->radioButton1->Location = System::Drawing::Point(441, 357);
+			this->radioButton1->Location = System::Drawing::Point(459, 357);
 			this->radioButton1->Name = L"radioButton1";
 			this->radioButton1->Size = System::Drawing::Size(52, 19);
 			this->radioButton1->TabIndex = 10;
@@ -216,7 +214,7 @@ namespace QLSV {
 				static_cast<System::Byte>(0)));
 			this->radioButton2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->radioButton2->Location = System::Drawing::Point(499, 358);
+			this->radioButton2->Location = System::Drawing::Point(517, 358);
 			this->radioButton2->Name = L"radioButton2";
 			this->radioButton2->Size = System::Drawing::Size(64, 19);
 			this->radioButton2->TabIndex = 11;
@@ -226,7 +224,9 @@ namespace QLSV {
 			// 
 			// pictureBox1
 			// 
-			this->pictureBox1->Location = System::Drawing::Point(613, 306);
+			this->pictureBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)),
+				static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			this->pictureBox1->Location = System::Drawing::Point(662, 305);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(90, 120);
 			this->pictureBox1->TabIndex = 12;
@@ -240,7 +240,7 @@ namespace QLSV {
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(613, 432);
+			this->button1->Location = System::Drawing::Point(662, 431);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(90, 25);
 			this->button1->TabIndex = 13;
@@ -255,7 +255,7 @@ namespace QLSV {
 				static_cast<System::Byte>(0)));
 			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(517, 473);
+			this->button2->Location = System::Drawing::Point(566, 473);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(90, 26);
 			this->button2->TabIndex = 14;
@@ -270,7 +270,7 @@ namespace QLSV {
 				static_cast<System::Byte>(0)));
 			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(613, 473);
+			this->button3->Location = System::Drawing::Point(662, 473);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(90, 26);
 			this->button3->TabIndex = 15;
@@ -294,11 +294,38 @@ namespace QLSV {
 				static_cast<System::Byte>(0)));
 			this->label6->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(309, 9);
+			this->label6->Location = System::Drawing::Point(333, 9);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(97, 19);
 			this->label6->TabIndex = 17;
 			this->label6->Text = L"Registration";
+			// 
+			// textBox4
+			// 
+			this->textBox4->Location = System::Drawing::Point(517, 305);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(102, 27);
+			this->textBox4->TabIndex = 18;
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Century Gothic", 11.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->label7->Location = System::Drawing::Point(453, 310);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(58, 18);
+			this->label7->TabIndex = 17;
+			this->label7->Text = L"Phone:";
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(337, 305);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(110, 27);
+			this->textBox5->TabIndex = 19;
 			// 
 			// RegisterForm
 			// 
@@ -306,6 +333,9 @@ namespace QLSV {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Cornsilk;
 			this->ClientSize = System::Drawing::Size(764, 511);
+			this->Controls->Add(this->textBox5);
+			this->Controls->Add(this->textBox4);
+			this->Controls->Add(this->label7);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
@@ -318,7 +348,6 @@ namespace QLSV {
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->textBox3);
 			this->Controls->Add(this->label3);
-			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);

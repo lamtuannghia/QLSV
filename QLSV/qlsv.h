@@ -576,6 +576,7 @@ private: System::Void btnScore_Click(System::Object^ sender, System::EventArgs^ 
 		}
 private: System::Void btnAttendance_Click(System::Object^ sender, System::EventArgs^ e) {
 	openChildForm(gcnew frmAttendance());
+	hideSubmenu();
 }
 private: System::Void btnRegistration_Click(System::Object^ sender, System::EventArgs^ e) {
 	openChildForm(gcnew RegisterForm());

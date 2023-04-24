@@ -37,8 +37,8 @@ namespace QLSV {
 		}
 	private: System::Windows::Forms::Panel^ panel_menu;
 	protected:
-	private: System::Windows::Forms::Button^ btnExit;
-	private: System::Windows::Forms::Button^ btnSettings;
+
+
 	private: System::Windows::Forms::Button^ btnScore;
 	private: System::Windows::Forms::Button^ btnEnrollments;
 	private: System::Windows::Forms::Panel^ panel_course;
@@ -56,7 +56,12 @@ namespace QLSV {
 	private: System::Windows::Forms::Panel^ panel2;
 	private: System::Windows::Forms::Panel^ panel3;
 	private: System::Windows::Forms::Panel^ panel4;
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Button^ btnExit;
+	private: System::Windows::Forms::Button^ btnSettings;
+	private: System::Windows::Forms::Panel^ panel_score;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ button3;
+
 
 
 
@@ -76,10 +81,12 @@ namespace QLSV {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(qlsv::typeid));
 			this->panel_menu = (gcnew System::Windows::Forms::Panel());
 			this->btnExit = (gcnew System::Windows::Forms::Button());
 			this->btnSettings = (gcnew System::Windows::Forms::Button());
+			this->panel_score = (gcnew System::Windows::Forms::Panel());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->btnScore = (gcnew System::Windows::Forms::Button());
 			this->btnEnrollments = (gcnew System::Windows::Forms::Button());
 			this->panel_course = (gcnew System::Windows::Forms::Panel());
@@ -97,11 +104,10 @@ namespace QLSV {
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel_menu->SuspendLayout();
+			this->panel_score->SuspendLayout();
 			this->panel_course->SuspendLayout();
 			this->panel_student->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panel_menu
@@ -110,6 +116,7 @@ namespace QLSV {
 			this->panel_menu->BackColor = System::Drawing::Color::Wheat;
 			this->panel_menu->Controls->Add(this->btnExit);
 			this->panel_menu->Controls->Add(this->btnSettings);
+			this->panel_menu->Controls->Add(this->panel_score);
 			this->panel_menu->Controls->Add(this->btnScore);
 			this->panel_menu->Controls->Add(this->btnEnrollments);
 			this->panel_menu->Controls->Add(this->panel_course);
@@ -121,7 +128,7 @@ namespace QLSV {
 			this->panel_menu->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel_menu->Location = System::Drawing::Point(0, 0);
 			this->panel_menu->Name = L"panel_menu";
-			this->panel_menu->Size = System::Drawing::Size(181, 561);
+			this->panel_menu->Size = System::Drawing::Size(181, 493);
 			this->panel_menu->TabIndex = 2;
 			// 
 			// btnExit
@@ -133,11 +140,11 @@ namespace QLSV {
 				static_cast<System::Byte>(0)));
 			this->btnExit->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->btnExit->Location = System::Drawing::Point(0, 493);
+			this->btnExit->Location = System::Drawing::Point(0, 552);
 			this->btnExit->Name = L"btnExit";
 			this->btnExit->Padding = System::Windows::Forms::Padding(7, 0, 0, 0);
-			this->btnExit->Size = System::Drawing::Size(181, 42);
-			this->btnExit->TabIndex = 14;
+			this->btnExit->Size = System::Drawing::Size(164, 42);
+			this->btnExit->TabIndex = 21;
 			this->btnExit->Text = L"Exit";
 			this->btnExit->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnExit->UseVisualStyleBackColor = true;
@@ -151,14 +158,62 @@ namespace QLSV {
 				static_cast<System::Byte>(0)));
 			this->btnSettings->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->btnSettings->Location = System::Drawing::Point(0, 451);
+			this->btnSettings->Location = System::Drawing::Point(0, 510);
 			this->btnSettings->Name = L"btnSettings";
 			this->btnSettings->Padding = System::Windows::Forms::Padding(7, 0, 0, 0);
-			this->btnSettings->Size = System::Drawing::Size(181, 42);
-			this->btnSettings->TabIndex = 13;
+			this->btnSettings->Size = System::Drawing::Size(164, 42);
+			this->btnSettings->TabIndex = 20;
 			this->btnSettings->Text = L"Settings";
 			this->btnSettings->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnSettings->UseVisualStyleBackColor = true;
+			// 
+			// panel_score
+			// 
+			this->panel_score->Controls->Add(this->button2);
+			this->panel_score->Controls->Add(this->button3);
+			this->panel_score->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel_score->Location = System::Drawing::Point(0, 451);
+			this->panel_score->Name = L"panel_score";
+			this->panel_score->Size = System::Drawing::Size(164, 59);
+			this->panel_score->TabIndex = 19;
+			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::Moccasin;
+			this->button2->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button2->FlatAppearance->BorderSize = 0;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Font = (gcnew System::Drawing::Font(L"MV Boli", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->button2->Location = System::Drawing::Point(0, 29);
+			this->button2->Name = L"button2";
+			this->button2->Padding = System::Windows::Forms::Padding(30, 0, 0, 0);
+			this->button2->Size = System::Drawing::Size(164, 29);
+			this->button2->TabIndex = 18;
+			this->button2->Text = L"Manage Score";
+			this->button2->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button2->UseVisualStyleBackColor = false;
+			// 
+			// button3
+			// 
+			this->button3->BackColor = System::Drawing::Color::Moccasin;
+			this->button3->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button3->FlatAppearance->BorderSize = 0;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button3->Font = (gcnew System::Drawing::Font(L"MV Boli", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->button3->Location = System::Drawing::Point(0, 0);
+			this->button3->Name = L"button3";
+			this->button3->Padding = System::Windows::Forms::Padding(30, 0, 0, 0);
+			this->button3->Size = System::Drawing::Size(164, 29);
+			this->button3->TabIndex = 17;
+			this->button3->Text = L"Add Score";
+			this->button3->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->button3->UseVisualStyleBackColor = false;
 			// 
 			// btnScore
 			// 
@@ -172,11 +227,12 @@ namespace QLSV {
 			this->btnScore->Location = System::Drawing::Point(0, 409);
 			this->btnScore->Name = L"btnScore";
 			this->btnScore->Padding = System::Windows::Forms::Padding(7, 0, 0, 0);
-			this->btnScore->Size = System::Drawing::Size(181, 42);
+			this->btnScore->Size = System::Drawing::Size(164, 42);
 			this->btnScore->TabIndex = 12;
 			this->btnScore->Text = L"Score";
 			this->btnScore->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnScore->UseVisualStyleBackColor = true;
+			this->btnScore->Click += gcnew System::EventHandler(this, &qlsv::btnScore_Click);
 			// 
 			// btnEnrollments
 			// 
@@ -190,7 +246,7 @@ namespace QLSV {
 			this->btnEnrollments->Location = System::Drawing::Point(0, 367);
 			this->btnEnrollments->Name = L"btnEnrollments";
 			this->btnEnrollments->Padding = System::Windows::Forms::Padding(7, 0, 0, 0);
-			this->btnEnrollments->Size = System::Drawing::Size(181, 42);
+			this->btnEnrollments->Size = System::Drawing::Size(164, 42);
 			this->btnEnrollments->TabIndex = 10;
 			this->btnEnrollments->Text = L"Enrollments";
 			this->btnEnrollments->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -203,7 +259,7 @@ namespace QLSV {
 			this->panel_course->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel_course->Location = System::Drawing::Point(0, 308);
 			this->panel_course->Name = L"panel_course";
-			this->panel_course->Size = System::Drawing::Size(181, 59);
+			this->panel_course->Size = System::Drawing::Size(164, 59);
 			this->panel_course->TabIndex = 9;
 			// 
 			// btnManageCourse
@@ -219,7 +275,7 @@ namespace QLSV {
 			this->btnManageCourse->Location = System::Drawing::Point(0, 29);
 			this->btnManageCourse->Name = L"btnManageCourse";
 			this->btnManageCourse->Padding = System::Windows::Forms::Padding(30, 0, 0, 0);
-			this->btnManageCourse->Size = System::Drawing::Size(181, 29);
+			this->btnManageCourse->Size = System::Drawing::Size(164, 29);
 			this->btnManageCourse->TabIndex = 1;
 			this->btnManageCourse->Text = L"Manage Course";
 			this->btnManageCourse->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -238,7 +294,7 @@ namespace QLSV {
 			this->btnNewCourse->Location = System::Drawing::Point(0, 0);
 			this->btnNewCourse->Name = L"btnNewCourse";
 			this->btnNewCourse->Padding = System::Windows::Forms::Padding(30, 0, 0, 0);
-			this->btnNewCourse->Size = System::Drawing::Size(181, 29);
+			this->btnNewCourse->Size = System::Drawing::Size(164, 29);
 			this->btnNewCourse->TabIndex = 0;
 			this->btnNewCourse->Text = L"New Course";
 			this->btnNewCourse->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -256,7 +312,7 @@ namespace QLSV {
 			this->btnCourse->Location = System::Drawing::Point(0, 266);
 			this->btnCourse->Name = L"btnCourse";
 			this->btnCourse->Padding = System::Windows::Forms::Padding(7, 0, 0, 0);
-			this->btnCourse->Size = System::Drawing::Size(181, 42);
+			this->btnCourse->Size = System::Drawing::Size(164, 42);
 			this->btnCourse->TabIndex = 8;
 			this->btnCourse->Text = L"Course";
 			this->btnCourse->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -271,7 +327,7 @@ namespace QLSV {
 			this->panel_student->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel_student->Location = System::Drawing::Point(0, 179);
 			this->panel_student->Name = L"panel_student";
-			this->panel_student->Size = System::Drawing::Size(181, 87);
+			this->panel_student->Size = System::Drawing::Size(164, 87);
 			this->panel_student->TabIndex = 7;
 			// 
 			// btnStatus
@@ -287,7 +343,7 @@ namespace QLSV {
 			this->btnStatus->Location = System::Drawing::Point(0, 58);
 			this->btnStatus->Name = L"btnStatus";
 			this->btnStatus->Padding = System::Windows::Forms::Padding(30, 0, 0, 0);
-			this->btnStatus->Size = System::Drawing::Size(181, 29);
+			this->btnStatus->Size = System::Drawing::Size(164, 29);
 			this->btnStatus->TabIndex = 2;
 			this->btnStatus->Text = L"Status";
 			this->btnStatus->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -306,7 +362,7 @@ namespace QLSV {
 			this->btnManageStudent->Location = System::Drawing::Point(0, 29);
 			this->btnManageStudent->Name = L"btnManageStudent";
 			this->btnManageStudent->Padding = System::Windows::Forms::Padding(30, 0, 0, 0);
-			this->btnManageStudent->Size = System::Drawing::Size(181, 29);
+			this->btnManageStudent->Size = System::Drawing::Size(164, 29);
 			this->btnManageStudent->TabIndex = 1;
 			this->btnManageStudent->Text = L"Manage Student";
 			this->btnManageStudent->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -325,7 +381,7 @@ namespace QLSV {
 			this->btnRegistration->Location = System::Drawing::Point(0, 0);
 			this->btnRegistration->Name = L"btnRegistration";
 			this->btnRegistration->Padding = System::Windows::Forms::Padding(30, 0, 0, 0);
-			this->btnRegistration->Size = System::Drawing::Size(181, 29);
+			this->btnRegistration->Size = System::Drawing::Size(164, 29);
 			this->btnRegistration->TabIndex = 0;
 			this->btnRegistration->Text = L"Registration";
 			this->btnRegistration->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -343,7 +399,7 @@ namespace QLSV {
 			this->btnStudent->Location = System::Drawing::Point(0, 137);
 			this->btnStudent->Name = L"btnStudent";
 			this->btnStudent->Padding = System::Windows::Forms::Padding(7, 0, 0, 0);
-			this->btnStudent->Size = System::Drawing::Size(181, 42);
+			this->btnStudent->Size = System::Drawing::Size(164, 42);
 			this->btnStudent->TabIndex = 6;
 			this->btnStudent->Text = L"Student";
 			this->btnStudent->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -362,7 +418,7 @@ namespace QLSV {
 			this->btnDashboard->Location = System::Drawing::Point(0, 95);
 			this->btnDashboard->Name = L"btnDashboard";
 			this->btnDashboard->Padding = System::Windows::Forms::Padding(7, 0, 0, 0);
-			this->btnDashboard->Size = System::Drawing::Size(181, 42);
+			this->btnDashboard->Size = System::Drawing::Size(164, 42);
 			this->btnDashboard->TabIndex = 5;
 			this->btnDashboard->Text = L"Dashboard";
 			this->btnDashboard->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -374,7 +430,7 @@ namespace QLSV {
 			this->panel_logo->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel_logo->Location = System::Drawing::Point(0, 0);
 			this->panel_logo->Name = L"panel_logo";
-			this->panel_logo->Size = System::Drawing::Size(181, 95);
+			this->panel_logo->Size = System::Drawing::Size(164, 95);
 			this->panel_logo->TabIndex = 0;
 			// 
 			// panel1
@@ -383,7 +439,7 @@ namespace QLSV {
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel1->Location = System::Drawing::Point(181, 0);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(10, 561);
+			this->panel1->Size = System::Drawing::Size(10, 493);
 			this->panel1->TabIndex = 3;
 			// 
 			// panel2
@@ -408,29 +464,17 @@ namespace QLSV {
 			// 
 			this->panel4->BackColor = System::Drawing::Color::Wheat;
 			this->panel4->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->panel4->Location = System::Drawing::Point(191, 475);
+			this->panel4->Location = System::Drawing::Point(191, 407);
 			this->panel4->Name = L"panel4";
 			this->panel4->Size = System::Drawing::Size(731, 86);
 			this->panel4->TabIndex = 6;
-			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(191, 95);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(731, 380);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox1->TabIndex = 7;
-			this->pictureBox1->TabStop = false;
 			// 
 			// qlsv
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Cornsilk;
-			this->ClientSize = System::Drawing::Size(922, 561);
-			this->Controls->Add(this->pictureBox1);
+			this->ClientSize = System::Drawing::Size(922, 493);
 			this->Controls->Add(this->panel4);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel2);
@@ -442,9 +486,9 @@ namespace QLSV {
 			this->Text = L"Student Manangement";
 			this->Load += gcnew System::EventHandler(this, &qlsv::qlsv_Load);
 			this->panel_menu->ResumeLayout(false);
+			this->panel_score->ResumeLayout(false);
 			this->panel_course->ResumeLayout(false);
 			this->panel_student->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -453,6 +497,7 @@ namespace QLSV {
 	{
 		   panel_student->Visible = false;
 		   panel_course->Visible = false;
+		   panel_score->Visible = false;
 	}
 	private: Void hideSubmenu()
 	{
@@ -460,6 +505,8 @@ namespace QLSV {
 			panel_student->Visible = false;
 		if (panel_course->Visible == true)
 			panel_course->Visible = false;
+		if (panel_score->Visible == true)
+			panel_score->Visible = false;
 	}
 	private: Void showSubmenu(Panel ^ a)
 	{
@@ -478,6 +525,9 @@ private: System::Void btnStudent_Click(System::Object^ sender, System::EventArgs
 }
 private: System::Void btnCourse_Click(System::Object^ sender, System::EventArgs^ e) {
 	showSubmenu(panel_course);
+}
+private: System::Void btnScore_Click(System::Object^ sender, System::EventArgs^ e) {
+	showSubmenu(panel_score);
 }
 };
 }

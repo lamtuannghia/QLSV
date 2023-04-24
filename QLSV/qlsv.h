@@ -59,8 +59,10 @@ namespace QLSV {
 	private: System::Windows::Forms::Button^ btnExit;
 	private: System::Windows::Forms::Button^ btnSettings;
 	private: System::Windows::Forms::Panel^ panel_score;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Button^ btnManageScore;
+	private: System::Windows::Forms::Button^ btnAddScore;
+
+
 
 
 
@@ -85,8 +87,8 @@ namespace QLSV {
 			this->btnExit = (gcnew System::Windows::Forms::Button());
 			this->btnSettings = (gcnew System::Windows::Forms::Button());
 			this->panel_score = (gcnew System::Windows::Forms::Panel());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->btnManageScore = (gcnew System::Windows::Forms::Button());
+			this->btnAddScore = (gcnew System::Windows::Forms::Button());
 			this->btnScore = (gcnew System::Windows::Forms::Button());
 			this->btnEnrollments = (gcnew System::Windows::Forms::Button());
 			this->panel_course = (gcnew System::Windows::Forms::Panel());
@@ -169,51 +171,51 @@ namespace QLSV {
 			// 
 			// panel_score
 			// 
-			this->panel_score->Controls->Add(this->button2);
-			this->panel_score->Controls->Add(this->button3);
+			this->panel_score->Controls->Add(this->btnManageScore);
+			this->panel_score->Controls->Add(this->btnAddScore);
 			this->panel_score->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel_score->Location = System::Drawing::Point(0, 451);
 			this->panel_score->Name = L"panel_score";
 			this->panel_score->Size = System::Drawing::Size(164, 59);
 			this->panel_score->TabIndex = 19;
 			// 
-			// button2
+			// btnManageScore
 			// 
-			this->button2->BackColor = System::Drawing::Color::Moccasin;
-			this->button2->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button2->FlatAppearance->BorderSize = 0;
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Font = (gcnew System::Drawing::Font(L"MV Boli", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnManageScore->BackColor = System::Drawing::Color::Moccasin;
+			this->btnManageScore->Dock = System::Windows::Forms::DockStyle::Top;
+			this->btnManageScore->FlatAppearance->BorderSize = 0;
+			this->btnManageScore->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnManageScore->Font = (gcnew System::Drawing::Font(L"MV Boli", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+			this->btnManageScore->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(0, 29);
-			this->button2->Name = L"button2";
-			this->button2->Padding = System::Windows::Forms::Padding(30, 0, 0, 0);
-			this->button2->Size = System::Drawing::Size(164, 29);
-			this->button2->TabIndex = 18;
-			this->button2->Text = L"Manage Score";
-			this->button2->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button2->UseVisualStyleBackColor = false;
+			this->btnManageScore->Location = System::Drawing::Point(0, 29);
+			this->btnManageScore->Name = L"btnManageScore";
+			this->btnManageScore->Padding = System::Windows::Forms::Padding(30, 0, 0, 0);
+			this->btnManageScore->Size = System::Drawing::Size(164, 29);
+			this->btnManageScore->TabIndex = 18;
+			this->btnManageScore->Text = L"Manage Score";
+			this->btnManageScore->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnManageScore->UseVisualStyleBackColor = false;
 			// 
-			// button3
+			// btnAddScore
 			// 
-			this->button3->BackColor = System::Drawing::Color::Moccasin;
-			this->button3->Dock = System::Windows::Forms::DockStyle::Top;
-			this->button3->FlatAppearance->BorderSize = 0;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Font = (gcnew System::Drawing::Font(L"MV Boli", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnAddScore->BackColor = System::Drawing::Color::Moccasin;
+			this->btnAddScore->Dock = System::Windows::Forms::DockStyle::Top;
+			this->btnAddScore->FlatAppearance->BorderSize = 0;
+			this->btnAddScore->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnAddScore->Font = (gcnew System::Drawing::Font(L"MV Boli", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+			this->btnAddScore->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(0, 0);
-			this->button3->Name = L"button3";
-			this->button3->Padding = System::Windows::Forms::Padding(30, 0, 0, 0);
-			this->button3->Size = System::Drawing::Size(164, 29);
-			this->button3->TabIndex = 17;
-			this->button3->Text = L"Add Score";
-			this->button3->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->button3->UseVisualStyleBackColor = false;
+			this->btnAddScore->Location = System::Drawing::Point(0, 0);
+			this->btnAddScore->Name = L"btnAddScore";
+			this->btnAddScore->Padding = System::Windows::Forms::Padding(30, 0, 0, 0);
+			this->btnAddScore->Size = System::Drawing::Size(164, 29);
+			this->btnAddScore->TabIndex = 17;
+			this->btnAddScore->Text = L"Add Score";
+			this->btnAddScore->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnAddScore->UseVisualStyleBackColor = false;
 			// 
 			// btnScore
 			// 

@@ -557,6 +557,7 @@ private: System::Void btnScore_Click(System::Object^ sender, System::EventArgs^ 
 				activeForm->Close();
 			activeForm = childForm;
 			childForm->TopLevel = false;
+			childForm->Dock = DockStyle::Fill;
 			panel_main->Controls->Add(childForm);
 			panel_main->Tag = childForm;
 			childForm->BringToFront();

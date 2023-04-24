@@ -509,7 +509,6 @@ namespace QLSV {
 			this->panel_score->ResumeLayout(false);
 			this->panel_course->ResumeLayout(false);
 			this->panel_student->ResumeLayout(false);
-			this->panel_main->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -566,6 +565,7 @@ private: System::Void btnScore_Click(System::Object^ sender, System::EventArgs^ 
 		}
 private: System::Void btnAttendance_Click(System::Object^ sender, System::EventArgs^ e) {
 	openChildForm(gcnew frmAttendance());
+	hideSubmenu();
 }
 private: System::Void btnRegistration_Click(System::Object^ sender, System::EventArgs^ e) {
 	openChildForm(gcnew RegisterForm());

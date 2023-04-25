@@ -1,10 +1,14 @@
 #pragma once
-#include "frmAttendance.h"
+
 #include "RegisterForm.h"
+#include "frmAttendance.h"
 #include "frmManageStu.h"
 #include "frmNewCourse.h"
 #include "frmStatus.h"
 #include "frmManageCourse.h"
+#include "frmAddScore.h"
+#include "frmManageScore.h"
+
 namespace QLSV {
 
 	using namespace System;
@@ -59,23 +63,17 @@ namespace QLSV {
 	private: System::Windows::Forms::Button^ btnDashboard;
 	private: System::Windows::Forms::Panel^ panel_logo;
 
-
-
-
 	private: System::Windows::Forms::Button^ btnExit;
 	private: System::Windows::Forms::Button^ btnSettings;
 	private: System::Windows::Forms::Panel^ panel_score;
 	private: System::Windows::Forms::Button^ btnManageScore;
 	private: System::Windows::Forms::Button^ btnAddScore;
 	private: System::Windows::Forms::Panel^ panel_main;
+	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Panel^ panel4;
 	private: System::Windows::Forms::Panel^ panel3;
 	private: System::Windows::Forms::Panel^ panel2;
-	private: System::Windows::Forms::Panel^ panel1;
-
-
-
-
+	private: System::Windows::Forms::Panel^ panel5;
 
 
 
@@ -114,21 +112,23 @@ namespace QLSV {
 			this->btnDashboard = (gcnew System::Windows::Forms::Button());
 			this->panel_logo = (gcnew System::Windows::Forms::Panel());
 			this->panel_main = (gcnew System::Windows::Forms::Panel());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->panel5 = (gcnew System::Windows::Forms::Panel());
 			this->panel_menu->SuspendLayout();
 			this->panel_score->SuspendLayout();
 			this->panel_course->SuspendLayout();
 			this->panel_student->SuspendLayout();
 			this->panel_main->SuspendLayout();
+			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel_menu
 			// 
 			this->panel_menu->AutoScroll = true;
-			this->panel_menu->BackColor = System::Drawing::Color::Tan;
+			this->panel_menu->BackColor = System::Drawing::Color::Wheat;
 			this->panel_menu->Controls->Add(this->btnExit);
 			this->panel_menu->Controls->Add(this->btnSettings);
 			this->panel_menu->Controls->Add(this->panel_score);
@@ -211,6 +211,7 @@ namespace QLSV {
 			this->btnManageScore->Text = L"Manage Score";
 			this->btnManageScore->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnManageScore->UseVisualStyleBackColor = false;
+			this->btnManageScore->Click += gcnew System::EventHandler(this, &qlsv::btnManageScore_Click);
 			// 
 			// btnAddScore
 			// 
@@ -230,6 +231,7 @@ namespace QLSV {
 			this->btnAddScore->Text = L"Add Score";
 			this->btnAddScore->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnAddScore->UseVisualStyleBackColor = false;
+			this->btnAddScore->Click += gcnew System::EventHandler(this, &qlsv::btnAddScore_Click);
 			// 
 			// btnScore
 			// 
@@ -445,9 +447,11 @@ namespace QLSV {
 			this->btnDashboard->Text = L"Dashboard";
 			this->btnDashboard->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnDashboard->UseVisualStyleBackColor = true;
+			this->btnDashboard->Click += gcnew System::EventHandler(this, &qlsv::btnDashboard_Click);
 			// 
 			// panel_logo
 			// 
+			this->panel_logo->BackColor = System::Drawing::Color::Wheat;
 			this->panel_logo->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel_logo->Location = System::Drawing::Point(0, 0);
 			this->panel_logo->Name = L"panel_logo";
@@ -456,17 +460,24 @@ namespace QLSV {
 			// 
 			// panel_main
 			// 
-			this->panel_main->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-				| System::Windows::Forms::AnchorStyles::Left)
-				| System::Windows::Forms::AnchorStyles::Right));
-			this->panel_main->Controls->Add(this->panel4);
-			this->panel_main->Controls->Add(this->panel3);
-			this->panel_main->Controls->Add(this->panel2);
 			this->panel_main->Controls->Add(this->panel1);
+			this->panel_main->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel_main->Location = System::Drawing::Point(170, 0);
 			this->panel_main->Name = L"panel_main";
 			this->panel_main->Size = System::Drawing::Size(764, 511);
 			this->panel_main->TabIndex = 3;
+			// 
+			// panel1
+			// 
+			this->panel1->Controls->Add(this->panel4);
+			this->panel1->Controls->Add(this->panel3);
+			this->panel1->Controls->Add(this->panel2);
+			this->panel1->Controls->Add(this->panel5);
+			this->panel1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->panel1->Location = System::Drawing::Point(0, 0);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(764, 511);
+			this->panel1->TabIndex = 0;
 			// 
 			// panel4
 			// 
@@ -475,7 +486,7 @@ namespace QLSV {
 			this->panel4->Location = System::Drawing::Point(10, 425);
 			this->panel4->Name = L"panel4";
 			this->panel4->Size = System::Drawing::Size(754, 86);
-			this->panel4->TabIndex = 10;
+			this->panel4->TabIndex = 14;
 			// 
 			// panel3
 			// 
@@ -484,7 +495,7 @@ namespace QLSV {
 			this->panel3->Location = System::Drawing::Point(10, 34);
 			this->panel3->Name = L"panel3";
 			this->panel3->Size = System::Drawing::Size(754, 61);
-			this->panel3->TabIndex = 9;
+			this->panel3->TabIndex = 13;
 			// 
 			// panel2
 			// 
@@ -493,16 +504,16 @@ namespace QLSV {
 			this->panel2->Location = System::Drawing::Point(10, 0);
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(754, 34);
-			this->panel2->TabIndex = 8;
+			this->panel2->TabIndex = 12;
 			// 
-			// panel1
+			// panel5
 			// 
-			this->panel1->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
-			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(10, 511);
-			this->panel1->TabIndex = 7;
+			this->panel5->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->panel5->Dock = System::Windows::Forms::DockStyle::Left;
+			this->panel5->Location = System::Drawing::Point(0, 0);
+			this->panel5->Name = L"panel5";
+			this->panel5->Size = System::Drawing::Size(10, 511);
+			this->panel5->TabIndex = 11;
 			// 
 			// qlsv
 			// 
@@ -520,6 +531,8 @@ namespace QLSV {
 			this->panel_score->ResumeLayout(false);
 			this->panel_course->ResumeLayout(false);
 			this->panel_student->ResumeLayout(false);
+			this->panel_main->ResumeLayout(false);
+			this->panel1->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -582,23 +595,36 @@ private: System::Void btnRegistration_Click(System::Object^ sender, System::Even
 	openChildForm(gcnew RegisterForm());
 	hideSubmenu();
 }
-private: System::Void btnManageStudent_Click(System::Object^ sender, System::EventArgs^ e) {
-	openChildForm(gcnew frmManageStu());
+private: System::Void btnAddScore_Click(System::Object^ sender, System::EventArgs^ e) {
+	openChildForm(gcnew frmAddScore());
 	hideSubmenu();
 }
-private: System::Void btnExit_Click(System::Object^ sender, System::EventArgs^ e) {
-	Application::Exit();
-}
-private: System::Void btnNewCourse_Click(System::Object^ sender, System::EventArgs^ e) {
-	openChildForm(gcnew frmNewCourse());
+private: System::Void btnManageStudent_Click(System::Object^ sender, System::EventArgs^ e) {
+	openChildForm(gcnew frmManageStu());
 	hideSubmenu();
 }
 private: System::Void btnStatus_Click(System::Object^ sender, System::EventArgs^ e) {
 	openChildForm(gcnew frmStatus());
 	hideSubmenu();
 }
+private: System::Void btnNewCourse_Click(System::Object^ sender, System::EventArgs^ e) {
+	openChildForm(gcnew frmNewCourse());
+	hideSubmenu();
+}
 private: System::Void btnManageCourse_Click(System::Object^ sender, System::EventArgs^ e) {
 	openChildForm(gcnew frmManageCourse());
+	hideSubmenu();
+}
+private: System::Void btnDashboard_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (activeForm != nullptr)
+		activeForm->Close();
+	panel_main->Controls->Add(panel1);
+}
+private: System::Void btnExit_Click(System::Object^ sender, System::EventArgs^ e) {
+	Application::Exit();
+}
+private: System::Void btnManageScore_Click(System::Object^ sender, System::EventArgs^ e) {
+	openChildForm(gcnew frmManageScore());
 	hideSubmenu();
 }
 };

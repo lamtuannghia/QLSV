@@ -8,7 +8,8 @@
 #include "frmManageCourse.h"
 #include "frmAddScore.h"
 #include "frmManageScore.h"
-
+#include "frmAccount.h"
+#include"frmEnrollments.h"
 namespace QLSV {
 
 	using namespace System;
@@ -48,8 +49,8 @@ namespace QLSV {
 	protected:
 
 
-	private: System::Windows::Forms::Button^ btnScore;
-	private: System::Windows::Forms::Button^ btnAttendance;
+
+
 
 	private: System::Windows::Forms::Panel^ panel_course;
 	private: System::Windows::Forms::Button^ btnManageCourse;
@@ -63,17 +64,45 @@ namespace QLSV {
 	private: System::Windows::Forms::Button^ btnDashboard;
 	private: System::Windows::Forms::Panel^ panel_logo;
 
-	private: System::Windows::Forms::Button^ btnExit;
-	private: System::Windows::Forms::Button^ btnSettings;
-	private: System::Windows::Forms::Panel^ panel_score;
-	private: System::Windows::Forms::Button^ btnManageScore;
-	private: System::Windows::Forms::Button^ btnAddScore;
+
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Panel^ panel_main;
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Panel^ panel4;
 	private: System::Windows::Forms::Panel^ panel3;
 	private: System::Windows::Forms::Panel^ panel2;
 	private: System::Windows::Forms::Panel^ panel5;
+	private: System::Windows::Forms::Button^ btnExit;
+	private: System::Windows::Forms::Panel^ panel_Settings;
+
+	private: System::Windows::Forms::Button^ btnAccount;
+	private: System::Windows::Forms::Button^ btnSettings;
+	private: System::Windows::Forms::Panel^ panel_score;
+	private: System::Windows::Forms::Button^ btnManageScore;
+	private: System::Windows::Forms::Button^ btnAddScore;
+	private: System::Windows::Forms::Button^ btnScore;
+	private: System::Windows::Forms::Button^ btnAttendance;
+	private: System::Windows::Forms::Button^ btnEnrollments;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -93,13 +122,16 @@ namespace QLSV {
 		void InitializeComponent(void)
 		{
 			this->panel_menu = (gcnew System::Windows::Forms::Panel());
-			this->btnExit = (gcnew System::Windows::Forms::Button());
+			this->panel_Settings = (gcnew System::Windows::Forms::Panel());
+			this->btnAccount = (gcnew System::Windows::Forms::Button());
 			this->btnSettings = (gcnew System::Windows::Forms::Button());
 			this->panel_score = (gcnew System::Windows::Forms::Panel());
 			this->btnManageScore = (gcnew System::Windows::Forms::Button());
 			this->btnAddScore = (gcnew System::Windows::Forms::Button());
 			this->btnScore = (gcnew System::Windows::Forms::Button());
 			this->btnAttendance = (gcnew System::Windows::Forms::Button());
+			this->btnEnrollments = (gcnew System::Windows::Forms::Button());
+			this->btnExit = (gcnew System::Windows::Forms::Button());
 			this->panel_course = (gcnew System::Windows::Forms::Panel());
 			this->btnManageCourse = (gcnew System::Windows::Forms::Button());
 			this->btnNewCourse = (gcnew System::Windows::Forms::Button());
@@ -118,6 +150,7 @@ namespace QLSV {
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->panel5 = (gcnew System::Windows::Forms::Panel());
 			this->panel_menu->SuspendLayout();
+			this->panel_Settings->SuspendLayout();
 			this->panel_score->SuspendLayout();
 			this->panel_course->SuspendLayout();
 			this->panel_student->SuspendLayout();
@@ -129,11 +162,13 @@ namespace QLSV {
 			// 
 			this->panel_menu->AutoScroll = true;
 			this->panel_menu->BackColor = System::Drawing::Color::Wheat;
-			this->panel_menu->Controls->Add(this->btnExit);
+			this->panel_menu->Controls->Add(this->panel_Settings);
 			this->panel_menu->Controls->Add(this->btnSettings);
 			this->panel_menu->Controls->Add(this->panel_score);
 			this->panel_menu->Controls->Add(this->btnScore);
 			this->panel_menu->Controls->Add(this->btnAttendance);
+			this->panel_menu->Controls->Add(this->btnEnrollments);
+			this->panel_menu->Controls->Add(this->btnExit);
 			this->panel_menu->Controls->Add(this->panel_course);
 			this->panel_menu->Controls->Add(this->btnCourse);
 			this->panel_menu->Controls->Add(this->panel_student);
@@ -146,24 +181,34 @@ namespace QLSV {
 			this->panel_menu->Size = System::Drawing::Size(170, 511);
 			this->panel_menu->TabIndex = 2;
 			// 
-			// btnExit
+			// panel_Settings
 			// 
-			this->btnExit->Dock = System::Windows::Forms::DockStyle::Top;
-			this->btnExit->FlatAppearance->BorderSize = 0;
-			this->btnExit->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnExit->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->panel_Settings->Controls->Add(this->btnAccount);
+			this->panel_Settings->Dock = System::Windows::Forms::DockStyle::Top;
+			this->panel_Settings->Location = System::Drawing::Point(0, 597);
+			this->panel_Settings->Name = L"panel_Settings";
+			this->panel_Settings->Size = System::Drawing::Size(153, 32);
+			this->panel_Settings->TabIndex = 32;
+			// 
+			// btnAccount
+			// 
+			this->btnAccount->BackColor = System::Drawing::Color::Moccasin;
+			this->btnAccount->Dock = System::Windows::Forms::DockStyle::Top;
+			this->btnAccount->FlatAppearance->BorderSize = 0;
+			this->btnAccount->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnAccount->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnExit->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+			this->btnAccount->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->btnExit->Location = System::Drawing::Point(0, 552);
-			this->btnExit->Name = L"btnExit";
-			this->btnExit->Padding = System::Windows::Forms::Padding(7, 0, 0, 0);
-			this->btnExit->Size = System::Drawing::Size(153, 42);
-			this->btnExit->TabIndex = 21;
-			this->btnExit->Text = L"Exit";
-			this->btnExit->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->btnExit->UseVisualStyleBackColor = true;
-			this->btnExit->Click += gcnew System::EventHandler(this, &qlsv::btnExit_Click);
+			this->btnAccount->Location = System::Drawing::Point(0, 0);
+			this->btnAccount->Name = L"btnAccount";
+			this->btnAccount->Padding = System::Windows::Forms::Padding(30, 0, 0, 0);
+			this->btnAccount->Size = System::Drawing::Size(153, 29);
+			this->btnAccount->TabIndex = 24;
+			this->btnAccount->Text = L"Account";
+			this->btnAccount->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnAccount->UseVisualStyleBackColor = false;
+			this->btnAccount->Click += gcnew System::EventHandler(this, &qlsv::btnAccount_Click);
 			// 
 			// btnSettings
 			// 
@@ -174,24 +219,25 @@ namespace QLSV {
 				static_cast<System::Byte>(0)));
 			this->btnSettings->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->btnSettings->Location = System::Drawing::Point(0, 510);
+			this->btnSettings->Location = System::Drawing::Point(0, 555);
 			this->btnSettings->Name = L"btnSettings";
 			this->btnSettings->Padding = System::Windows::Forms::Padding(7, 0, 0, 0);
 			this->btnSettings->Size = System::Drawing::Size(153, 42);
-			this->btnSettings->TabIndex = 20;
+			this->btnSettings->TabIndex = 31;
 			this->btnSettings->Text = L"Settings";
 			this->btnSettings->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnSettings->UseVisualStyleBackColor = true;
+			this->btnSettings->Click += gcnew System::EventHandler(this, &qlsv::btnSettings_Click);
 			// 
 			// panel_score
 			// 
 			this->panel_score->Controls->Add(this->btnManageScore);
 			this->panel_score->Controls->Add(this->btnAddScore);
 			this->panel_score->Dock = System::Windows::Forms::DockStyle::Top;
-			this->panel_score->Location = System::Drawing::Point(0, 451);
+			this->panel_score->Location = System::Drawing::Point(0, 493);
 			this->panel_score->Name = L"panel_score";
-			this->panel_score->Size = System::Drawing::Size(153, 59);
-			this->panel_score->TabIndex = 19;
+			this->panel_score->Size = System::Drawing::Size(153, 62);
+			this->panel_score->TabIndex = 30;
 			// 
 			// btnManageScore
 			// 
@@ -242,11 +288,11 @@ namespace QLSV {
 				static_cast<System::Byte>(0)));
 			this->btnScore->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->btnScore->Location = System::Drawing::Point(0, 409);
+			this->btnScore->Location = System::Drawing::Point(0, 451);
 			this->btnScore->Name = L"btnScore";
 			this->btnScore->Padding = System::Windows::Forms::Padding(7, 0, 0, 0);
 			this->btnScore->Size = System::Drawing::Size(153, 42);
-			this->btnScore->TabIndex = 12;
+			this->btnScore->TabIndex = 29;
 			this->btnScore->Text = L"Score";
 			this->btnScore->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnScore->UseVisualStyleBackColor = true;
@@ -261,15 +307,53 @@ namespace QLSV {
 				static_cast<System::Byte>(0)));
 			this->btnAttendance->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->btnAttendance->Location = System::Drawing::Point(0, 367);
+			this->btnAttendance->Location = System::Drawing::Point(0, 409);
 			this->btnAttendance->Name = L"btnAttendance";
 			this->btnAttendance->Padding = System::Windows::Forms::Padding(7, 0, 0, 0);
 			this->btnAttendance->Size = System::Drawing::Size(153, 42);
-			this->btnAttendance->TabIndex = 10;
+			this->btnAttendance->TabIndex = 28;
 			this->btnAttendance->Text = L"Attendance";
 			this->btnAttendance->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnAttendance->UseVisualStyleBackColor = true;
 			this->btnAttendance->Click += gcnew System::EventHandler(this, &qlsv::btnAttendance_Click);
+			// 
+			// btnEnrollments
+			// 
+			this->btnEnrollments->Dock = System::Windows::Forms::DockStyle::Top;
+			this->btnEnrollments->FlatAppearance->BorderSize = 0;
+			this->btnEnrollments->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnEnrollments->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnEnrollments->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->btnEnrollments->Location = System::Drawing::Point(0, 367);
+			this->btnEnrollments->Name = L"btnEnrollments";
+			this->btnEnrollments->Padding = System::Windows::Forms::Padding(7, 0, 0, 0);
+			this->btnEnrollments->Size = System::Drawing::Size(153, 42);
+			this->btnEnrollments->TabIndex = 27;
+			this->btnEnrollments->Text = L"Enrollments";
+			this->btnEnrollments->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnEnrollments->UseVisualStyleBackColor = true;
+			this->btnEnrollments->Click += gcnew System::EventHandler(this, &qlsv::btnEnrollments_Click);
+			// 
+			// btnExit
+			// 
+			this->btnExit->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->btnExit->FlatAppearance->BorderSize = 0;
+			this->btnExit->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnExit->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnExit->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->btnExit->Location = System::Drawing::Point(0, 629);
+			this->btnExit->Name = L"btnExit";
+			this->btnExit->Padding = System::Windows::Forms::Padding(7, 0, 0, 0);
+			this->btnExit->Size = System::Drawing::Size(153, 42);
+			this->btnExit->TabIndex = 26;
+			this->btnExit->Text = L"Log Out";
+			this->btnExit->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->btnExit->UseVisualStyleBackColor = true;
+			this->btnExit->Click += gcnew System::EventHandler(this, &qlsv::btnExit_Click);
 			// 
 			// panel_course
 			// 
@@ -406,7 +490,7 @@ namespace QLSV {
 			this->btnRegistration->Padding = System::Windows::Forms::Padding(30, 0, 0, 0);
 			this->btnRegistration->Size = System::Drawing::Size(153, 29);
 			this->btnRegistration->TabIndex = 0;
-			this->btnRegistration->Text = L"Registration";
+			this->btnRegistration->Text = L"Add Student";
 			this->btnRegistration->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->btnRegistration->UseVisualStyleBackColor = false;
 			this->btnRegistration->Click += gcnew System::EventHandler(this, &qlsv::btnRegistration_Click);
@@ -528,6 +612,7 @@ namespace QLSV {
 			this->Text = L"Student Manangement";
 			this->Load += gcnew System::EventHandler(this, &qlsv::qlsv_Load);
 			this->panel_menu->ResumeLayout(false);
+			this->panel_Settings->ResumeLayout(false);
 			this->panel_score->ResumeLayout(false);
 			this->panel_course->ResumeLayout(false);
 			this->panel_student->ResumeLayout(false);
@@ -542,6 +627,7 @@ namespace QLSV {
 		   panel_student->Visible = false;
 		   panel_course->Visible = false;
 		   panel_score->Visible = false;
+		   panel_Settings->Visible = false;
 	}
 	private: Void hideSubmenu()
 	{
@@ -551,6 +637,8 @@ namespace QLSV {
 			panel_course->Visible = false;
 		if (panel_score->Visible == true)
 			panel_score->Visible = false;
+		if (panel_Settings->Visible == true)
+			panel_Settings->Visible = false;
 	}
 	private: Void showSubmenu(Panel ^ a)
 	{
@@ -587,16 +675,8 @@ private: System::Void btnScore_Click(System::Object^ sender, System::EventArgs^ 
 			childForm->Show();
 
 		}
-private: System::Void btnAttendance_Click(System::Object^ sender, System::EventArgs^ e) {
-	openChildForm(gcnew frmAttendance());
-	hideSubmenu();
-}
 private: System::Void btnRegistration_Click(System::Object^ sender, System::EventArgs^ e) {
 	openChildForm(gcnew RegisterForm());
-	hideSubmenu();
-}
-private: System::Void btnAddScore_Click(System::Object^ sender, System::EventArgs^ e) {
-	openChildForm(gcnew frmAddScore());
 	hideSubmenu();
 }
 private: System::Void btnManageStudent_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -623,8 +703,27 @@ private: System::Void btnDashboard_Click(System::Object^ sender, System::EventAr
 private: System::Void btnExit_Click(System::Object^ sender, System::EventArgs^ e) {
 	Application::Exit();
 }
+private: System::Void btnAttendance_Click(System::Object^ sender, System::EventArgs^ e) {
+	openChildForm(gcnew frmAttendance());
+	hideSubmenu();
+}
+private: System::Void btnAddScore_Click(System::Object^ sender, System::EventArgs^ e) {
+	openChildForm(gcnew frmAddScore());
+	hideSubmenu();
+}
 private: System::Void btnManageScore_Click(System::Object^ sender, System::EventArgs^ e) {
 	openChildForm(gcnew frmManageScore());
+	hideSubmenu();
+}
+private: System::Void btnSettings_Click(System::Object^ sender, System::EventArgs^ e) {
+	showSubmenu(panel_Settings);
+}
+private: System::Void btnAccount_Click(System::Object^ sender, System::EventArgs^ e) {
+	openChildForm(gcnew frmAccount());
+	hideSubmenu();
+}
+private: System::Void btnEnrollments_Click(System::Object^ sender, System::EventArgs^ e) {
+	openChildForm(gcnew frmEnrollments());
 	hideSubmenu();
 }
 };

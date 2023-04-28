@@ -41,12 +41,10 @@ namespace QLSV {
 
 
 
-
 	private: System::Windows::Forms::TextBox^ textBox3;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::Label^ label4;
-
 
 
 
@@ -58,23 +56,8 @@ namespace QLSV {
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::Label^ label1;
 
 
 
@@ -92,24 +75,28 @@ namespace QLSV {
 		void InitializeComponent(void)
 		{
 			this->panel8 = (gcnew System::Windows::Forms::Panel());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel8->SuspendLayout();
-			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel8
 			// 
 			this->panel8->BackColor = System::Drawing::Color::Cornsilk;
+			this->panel8->Controls->Add(this->textBox1);
+			this->panel8->Controls->Add(this->label1);
 			this->panel8->Controls->Add(this->dataGridView1);
 			this->panel8->Controls->Add(this->button4);
 			this->panel8->Controls->Add(this->button3);
@@ -123,6 +110,63 @@ namespace QLSV {
 			this->panel8->Name = L"panel8";
 			this->panel8->Size = System::Drawing::Size(764, 461);
 			this->panel8->TabIndex = 29;
+			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->AllowUserToOrderColumns = true;
+			this->dataGridView1->BackgroundColor = System::Drawing::Color::Wheat;
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Dock = System::Windows::Forms::DockStyle::Top;
+			this->dataGridView1->GridColor = System::Drawing::Color::Beige;
+			this->dataGridView1->Location = System::Drawing::Point(0, 0);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->Size = System::Drawing::Size(764, 201);
+			this->dataGridView1->TabIndex = 68;
+			// 
+			// button4
+			// 
+			this->button4->BackColor = System::Drawing::Color::DarkKhaki;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->button4->Location = System::Drawing::Point(217, 380);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(90, 26);
+			this->button4->TabIndex = 67;
+			this->button4->Text = L"Add";
+			this->button4->UseVisualStyleBackColor = false;
+			// 
+			// button3
+			// 
+			this->button3->BackColor = System::Drawing::Color::Coral;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->button3->Location = System::Drawing::Point(409, 380);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(90, 26);
+			this->button3->TabIndex = 66;
+			this->button3->Text = L"Delete";
+			this->button3->UseVisualStyleBackColor = false;
+			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::Khaki;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->button2->Location = System::Drawing::Point(313, 380);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(90, 26);
+			this->button2->TabIndex = 65;
+			this->button2->Text = L"Update";
+			this->button2->UseVisualStyleBackColor = false;
 			// 
 			// textBox3
 			// 
@@ -189,62 +233,25 @@ namespace QLSV {
 			this->label8->Text = L"Account";
 			this->label8->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
-			// button4
+			// textBox1
 			// 
-			this->button4->BackColor = System::Drawing::Color::DarkKhaki;
-			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->textBox1->Location = System::Drawing::Point(316, 327);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(174, 20);
+			this->textBox1->TabIndex = 70;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+			this->label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(220, 330);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(90, 26);
-			this->button4->TabIndex = 67;
-			this->button4->Text = L"Add";
-			this->button4->UseVisualStyleBackColor = false;
-			// 
-			// button3
-			// 
-			this->button3->BackColor = System::Drawing::Color::Coral;
-			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(412, 330);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(90, 26);
-			this->button3->TabIndex = 66;
-			this->button3->Text = L"Delete";
-			this->button3->UseVisualStyleBackColor = false;
-			// 
-			// button2
-			// 
-			this->button2->BackColor = System::Drawing::Color::Khaki;
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(128)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(316, 330);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(90, 26);
-			this->button2->TabIndex = 65;
-			this->button2->Text = L"Update";
-			this->button2->UseVisualStyleBackColor = false;
-			// 
-			// dataGridView1
-			// 
-			this->dataGridView1->AllowUserToOrderColumns = true;
-			this->dataGridView1->BackgroundColor = System::Drawing::Color::Wheat;
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Dock = System::Windows::Forms::DockStyle::Top;
-			this->dataGridView1->GridColor = System::Drawing::Color::Beige;
-			this->dataGridView1->Location = System::Drawing::Point(0, 0);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(764, 201);
-			this->dataGridView1->TabIndex = 68;
+			this->label1->Location = System::Drawing::Point(226, 328);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(56, 16);
+			this->label1->TabIndex = 69;
+			this->label1->Text = L"Role ID:";
 			// 
 			// frmAccount
 			// 
@@ -259,12 +266,12 @@ namespace QLSV {
 			this->Text = L"frmAccount";
 			this->panel8->ResumeLayout(false);
 			this->panel8->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-	};
+};
 }
